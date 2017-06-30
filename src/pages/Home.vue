@@ -16,10 +16,9 @@ export default {
     .home{
       padding:15px;
       color:#ccc;
-      font-size:16px;
-      line-height:17px;
       &>.title{
-        font-size:30px;
+        // font-size:1px;
+        color:#ccc;
       }
     }
 </style>

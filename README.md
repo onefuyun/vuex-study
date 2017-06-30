@@ -19,6 +19,11 @@
 #1px的问题   带小数的像素在不同的浏览器下效果不一样
 #淘宝的弹性布局lib-flexible不兼容响应式布局，1px的线条用伪元素和transform可以解决ios的问题
 
+#引入lib-flexible之后，文字的大小发生了不正常的变化，字体变得非常大，调整font-size没什么效果
+> <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0,maximum-scale=1.0">
+>解决方案：原来的meta标签中少写了 user-scalable=0和maximum-scale=1.0导致的，这两句必须有一句。
+
+
 # vuex-study
 
 > A Vue.js project
