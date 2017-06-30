@@ -28,25 +28,23 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" rel="stylesheet/scss" scoped>
+@import './src/assets/scss/function';
   
   
   $color: green !default;   // scss全局的变量
   .hello{
     padding:15px;
     &>.title{
+      display:block;
+      height:30px;
       color:$color;
       position:relative;
+      // border-bottom:1px solid #ccc;
+      // 解决移动端1px的线条过粗的情况
       &:before{
         content:'';
-        position:absolute;
-        top:0;
-        left:0;
-        border-top:1px;
-        background:red;
-        width:20px;
-        height:1px;
-        -webkit-transform:scale(0.5);
-        transform:scale(0.5);
+        // 混合宏的调用   
+        @include border-top1px(50%,-150px,600px);
       }
     }
     &>.content{

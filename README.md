@@ -9,6 +9,7 @@
  > 在build中的webpack.base.conf.js中会有配置生成的代码
 
  > 在组件中的style标签上加上lang="scss"就可以使用sass了，rel="stylesheet/scss" 这句代码不加也可以，目前没发现什么问题
+ > 在组件中使用函数，必须把function.scss文件引进去 用@import在全局中导入无效，必须导入到组件
 
 ###  我遇到的坑
  
@@ -23,7 +24,7 @@
 > <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0,maximum-scale=1.0">
 >解决方案：原来的meta标签中少写了 user-scalable=0和maximum-scale=1.0导致的，这两句必须有一句。
 
-
+    
 # vuex-study
 
 > A Vue.js project

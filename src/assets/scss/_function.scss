@@ -1,4 +1,13 @@
 // 解决移动端1px的问题
-@mixin border-top1px(){
-    
+// 混合宏
+@mixin border-top1px($top,$left,$width){
+    position:absolute;
+    top:$top;
+    left:$left;
+    border-bottom:1px;
+    background:red;
+    width:$width;
+    height:1px;
+    -webkit-transform:scale(0.5);
+    transform:scale(0.5);
 }
