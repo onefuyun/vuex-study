@@ -1,13 +1,43 @@
 // 解决移动端1px的问题
 // 混合宏
-@mixin border-top1px($top,$left,$width){
-    position:absolute;
-    top:$top;
-    left:$left;
-    border-bottom:1px;
-    background:red;
-    width:$width;
-    height:1px;
-    -webkit-transform:scale(0.5);
-    transform:scale(0.5);
+@mixin border-bottom1px($color){
+    position:relative;
+    &::after{
+        content:' ';
+        display:block;
+        width:200%;
+        height:1px;
+        position:absolute;
+        top:100%;
+        left:0;
+        border:1px solid $color;
+        -webkit-transform-origin:0 0;
+        transform-origin:0 0;
+        -webkit-transform:scale(0.5);
+        transform:scale(0.5);
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        pointer-events: none;
+    }
 }
+@mixin border-top1px($color){
+    position:relative;
+    &::after{
+        content:' ';
+        display:block;
+        width:200%;
+        height:1px;
+        position:absolute;
+        top:0;
+        left:0;
+        border:1px solid $color;
+        -webkit-transform-origin:0 0;
+        transform-origin:0 0;
+        -webkit-transform:scale(0.5);
+        transform:scale(0.5);
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        pointer-events: none;
+    }
+}
+

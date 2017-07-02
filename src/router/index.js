@@ -17,6 +17,13 @@ export default new Router({
       components:{
         default:resolve=>require(['@/pages/Home'],resolve)
       }
+    },
+    {
+      path:'/header',
+      name:'header',
+      components:{
+        default:resolve=>require(['@/components/header'],resolve)
+      }
     }
   ]
 })

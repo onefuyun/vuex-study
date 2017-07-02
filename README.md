@@ -24,7 +24,9 @@
 > <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0,maximum-scale=1.0">
 >解决方案：原来的meta标签中少写了 user-scalable=0和maximum-scale=1.0导致的，这两句必须有一句。
 
-    
+### 解决IOS的fixed的兼容问题，头部导航 
+#    header.vue
+
 # vuex-study
 
 > A Vue.js project
